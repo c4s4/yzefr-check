@@ -30,10 +30,16 @@ type Header struct {
 		Name  string `yaml:"name" validate:"required"`
 		Email string `yaml:"email"`
 	}
-	Date    string   `yaml:"date" validate:"required"`
-	Release string   `yaml:"release"`
-	Games   []string `yaml:"games" validate:"required"`
-	Tags    []string `yaml:"tags" validate:"required"`
+	Date       string   `yaml:"date" validate:"required"`
+	Release    string   `yaml:"release"`
+	Games      []string `yaml:"games"`
+	Tags       []string `yaml:"tags" validate:"required"`
+	PDF        string   `yaml:"pdf"`
+	Info       string   `yaml:"info"`
+	Alert      string   `yaml:"alert"`
+	TOC        bool     `yaml:"toc"`
+	Weight     float64  `yaml:"weight"`
+	Containers bool     `yaml:"containers"`
 }
 
 func main() {
@@ -49,7 +55,7 @@ func main() {
 		os.Exit(0)
 	}
 	if err := run(flag.Args()); err != nil {
-		fmt.Fprintf(os.Stderr, "ERROR %v", err)
+		fmt.Fprintf(os.Stderr, "ERROR %v\n", err)
 		os.Exit(1)
 	}
 }

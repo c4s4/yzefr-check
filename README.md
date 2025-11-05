@@ -26,3 +26,5 @@ Download the archive on
 [the releases page](https://github.com/c4s4/yzefr-check/releases). Unzip it and
 put the binary for your platform somewhere in your *PATH* (in directory
 */usr/local/bin* for instance).
+
+*Enjoy!*

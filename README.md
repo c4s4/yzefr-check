@@ -1,6 +1,6 @@
 # YZEfr Check
 
-Validate Markdown files for <yearzeroengine.fr> site.
+Validate Markdown files for [yearzeroengine.fr](yearzeroengine.fr) site.
 
 ## Installation
 

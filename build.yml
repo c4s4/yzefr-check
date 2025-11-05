@@ -1,0 +1,7 @@
+# NeON Build File (http://github.com/c4s4/neon)
+
+extends: c4s4/build/golang.yml
+default: [fmt, lint, test]
+
+properties:
+  RUN_ARGS: [test/nominal.md]

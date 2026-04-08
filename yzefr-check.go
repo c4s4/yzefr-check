@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"os"
 	"regexp"
+	"strings"
 
 	"github.com/go-playground/validator/v10"
 	"gopkg.in/yaml.v2"
@@ -55,7 +56,8 @@ func main() {
 		os.Exit(0)
 	}
 	if err := run(flag.Args()); err != nil {
-		fmt.Fprintf(os.Stderr, "ERROR %v\n", err)
+		message := strings.ReplaceAll(err.Error(), "\n", "")
+		fmt.Fprintf(os.Stderr, "ERROR %s\n", message)
 		os.Exit(1)
 	}
 }
